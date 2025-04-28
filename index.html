@@ -64,19 +64,40 @@
       <p><strong>Telefone/WhatsApp:</strong> (34) 99999-9999</p>
       <a href="https://wa.me/5534999999999" class="btn btn-whats">Chamar no WhatsApp</a>
 
-      <form class="mt-5" action="enviar.php" method="POST">
+      <!-- Formulário de Contato usando Getform -->
+      <form action="https://getform.io/f/azywvmzb" method="POST" class="mt-5">
+        <input type="hidden" name="_gotcha" style="display:none !important">
+        
         <div class="mb-3">
-          <input type="text" name="nome" class="form-control" placeholder="Seu nome" required>
+          <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
         </div>
+        
         <div class="mb-3">
           <input type="email" name="email" class="form-control" placeholder="Seu e-mail" required>
         </div>
+        
         <div class="mb-3">
-          <textarea name="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+          <textarea name="message" class="form-control" rows="5" placeholder="Escreva sua mensagem" required></textarea>
         </div>
-        <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
-      </form>
 
+        <!-- Checkbox de inscrição -->
+        <input type="checkbox" name="subscribe" value="yes" checked> Quero receber novidades
+        <br><br>
+
+        <!-- Radio Button de Gênero -->
+        <input type="radio" name="gender" value="male" checked> Masculino
+        <input type="radio" name="gender" value="female"> Feminino
+        <input type="radio" name="gender" value="other"> Outro
+        <br><br>
+
+        <!-- Seleção de Experiência de Trabalho -->
+        <select name="work-experience" class="form-control">
+          <option value="one-year">0-1 anos</option>
+          <option value="one-five-years">1-5 anos</option>
+        </select>
+
+        <button type="submit" class="btn btn-submit mt-3">Enviar Mensagem</button>
+      </form>
     </div>
   </section>
 
@@ -84,5 +105,7 @@
     <p>&copy; 2025 Top Corte de Árvores - Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
