@@ -64,8 +64,7 @@
       <p><strong>Telefone/WhatsApp:</strong> (34) 99999-9999</p>
       <a href="https://wa.me/5534999999999" class="btn btn-whats">Chamar no WhatsApp</a>
 
-      <form class="mt-5" action="https://formsubmit.co/dossantosjoaovitor340@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
+      <form class="mt-5" action="enviar.php" method="POST">
         <div class="mb-3">
           <input type="text" name="nome" class="form-control" placeholder="Seu nome" required>
         </div>
@@ -73,10 +72,11 @@
           <input type="email" name="email" class="form-control" placeholder="Seu e-mail" required>
         </div>
         <div class="mb-3">
-          <textarea name="mensagem" class="form-control" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+          <textarea name="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Escreva sua mensagem" required></textarea>
         </div>
         <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
       </form>
+
     </div>
   </section>
 
