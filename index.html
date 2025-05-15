@@ -6,21 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Serviços profissionais de corte e poda de árvores em Uberlândia e região. Atendimento rápido e seguro.">
-  <title>Top Corte de Árvores</title>
+  <title>Corte de Árvores</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       scroll-behavior: smooth;
+      background-color: #f0f4f3;
     }
 
-    header,
-    footer {
+    header {
       background: #14532d;
       color: white;
       padding: 2rem 1rem;
     }
 
+    footer {
+      background:
+        #6c3c0c;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
     section {
+
       padding: 3rem 1rem;
     }
 
@@ -28,6 +36,7 @@
       background-color: #25d366;
       color: white;
       border: none;
+      transition: background-color 0.3s;
     }
 
     .btn-whats:hover {
@@ -43,20 +52,22 @@
       background-color: #14532d;
       color: white;
       border: none;
+      transition: background-color 0.3s;
     }
 
     .btn-submit:hover {
-      background-color: #0e4022;
+      background-color: #4db978;
     }
 
     .card-servico {
+
       width: 100%;
       min-height: 350px;
-      /* Aumentei a altura mínima */
       border: none;
-      background-color: #f8f9fa;
-      transition: transform 0.3s;
+      background-color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
       padding-bottom: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .card-servico .carousel-inner {
@@ -66,7 +77,6 @@
     .card-servico .carousel-item img {
       width: 100%;
       height: 250px;
-      /* Aumentei a altura da imagem */
       object-fit: cover;
     }
 
@@ -80,22 +90,100 @@
     }
 
     .card-servico:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     }
 
     .containerCONTATO {
-      width: 60%;
-      padding: 50px;
-      border: 1px solid green;
+      width: 80%;
+      padding: 30px;
+      background-color: #fff;
       border-radius: 10px;
       margin: 0 auto;
-      /* Centraliza horizontalmente */
+      margin-top: 50px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #servicos {
+      display: flex;
+      /* Ativa o flexbox */
+      flex-wrap: wrap;
+      /* Permite quebra de linha se necessário */
+      gap: 20px;
+      /* Espaçamento entre os cards */
+      justify-content: center;
+
+      /* Centraliza os cards */
+      padding: 4rem 1rem;
+      background-color: #e0f2e9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #servicos .col-md-5 {
+      flex: 1 1 calc(20% - 20px);
+      /* Define a largura dos cards */
+      box-sizing: border-box;
+      padding: 1rem;
+      margin: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease,
+    }
+
+    #servicos .col-md-5:hover {
+      transform: scale(1.03);
 
     }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+
+    .row-mt-4 {}
+
+    .col-md-4 {
+      flex: 1 1 calc(33.33% - 20px);
+      /* Define a largura dos cards */
+      box-sizing: border-box;
+      padding: 1rem;
+
+      border-radius: 8px;
+      transition: transform 0.3s ease,
+    }
+
+    .col-md-4:hover {
+      transform: scale(1.05);
+    }
+
+
+
+    h2.mb-4 {
+      font-size: 2rem;
+
+      text-align: center;
+      color: #333;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .social-icons a img {
+      width: 50px;
+      margin-right: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .containerCONTATO {
+        width: 100%;
+        padding: 30px;
+      }
+
+      .card-servico {
+        min-height: 300px;
+      }
     }
   </style>
 </head>
@@ -109,182 +197,191 @@
 
   <section id="servicos" class="container text-center">
     <h2 class="mb-4">Nossos Serviços</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card card-servico p-3">
-          <div id="bolachoesCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="3000">
-                <img src="imgs\Bolachas\1.jpg" alt="Bolachão 1">
-              </div>
-              <div class="carousel-item" data-bs-interval="1000">
-                <img src="imgs\Bolachas\2.jpg" alt="Bolachão 2">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\3.jpg" alt="Bolachão 3">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\4.jpg" alt="Bolachão 4">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\5.jpg" alt="Bolachão 5">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\6.jpg" alt="Bolachão 6">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\7.jpg" alt="Bolachão 7">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\8.jpg" alt="Bolachão 8">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\9.jpg" alt="Bolachão 9">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\10.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\11.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\12.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\13.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\14.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\15.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\16.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\17.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\18.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\19.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\20.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\21.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\22.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\23.jpg" alt="Bolachão 10">
-              </div>
-              <div class="carousel-item" data-bs-interval="3000">
-                <img src="imgs\Bolachas\24.jpg" alt="Bolachão 10">
-              </div>
-            </div>
-
-          </div>
-          <h5>Bolachões de Madeira</h5>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card card-servico p-3">
-          <div id="moveisCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="imgs\Peças e moveis\1.jpg" alt="Móvel 1">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\3.jpg" alt="Móvel 2">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\4.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\5.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\6.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\7.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\8.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\9.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\10.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\11.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\12.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\13.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\14.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\15.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\16.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\17.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\18.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\19.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\20.jpg" alt="Móvel 3">
-              </div>
-              <div class="carousel-item">
-                <img src="imgs\Peças e moveis\21.jpg" alt="Móvel 3">
-              </div>
-            </div>
-          </div>
-          <h5>Móveis de Madeira</h5>
-        </div>
-      </div>
-
-      <div class="row">
-       
-        <div class="col-md-4">
-          <div class="card card-servico p-3 d-flex">
-            <img src="imgs\madeira\corte.jpg" alt="Corte de Árvores" class="img-fluid" style="max-width: 150px; margin-right: 15px;">
-            <div>
-              <h5>Corte de Árvores</h5>
-              <p>Realizamos o corte seguro e eficiente de árvores, garantindo a segurança e o cuidado com o ambiente.</p>
-              <h5>Serviços de Jardinagem</h5>
-              <p>Oferecemos serviços de jardinagem completos, incluindo plantio, poda e manutenção de jardins.</p>
-              <h5>Venda de Madeira</h5>
-              <p>Vendemos madeira de qualidade para construção, móveis e outros projetos, com entrega rápida e eficiente.</p>
-            </div>
+    <br>
+    <br>
+    <div class="row mt-4" style="width: 100%;">
+      <div class="col-12">
+        <div class="card card-servico p-3 d-flex flex-column flex-md-row align-items-center">
+          <img src="imgs/madeira/corte.jpg" alt="Corte de Árvores" class="img-fluid mb-3 mb-md-0"
+            style="width: 350px; border-radius: 4%; margin-right: 50px;">
+          <div class="ms-md-3">
+            <h5>Corte de Árvores</h5>
+            <p>Realizamos o corte seguro e eficiente de árvores, garantindo a segurança e o cuidado com o ambiente</p>
+            <br>
+            <h5>Serviços de Jardinagem</h5>
+            <p>Oferecemos serviços de jardinagem completos, incluindo plantio, poda e manutenção de jardins</p>
+            <br>
+            <h5>Venda de Madeira</h5>
+            <p>Vendemos madeira de qualidade para construção, móveis e outros projetos, com entrega rápida e eficiente
+            </p>
           </div>
         </div>
       </div>
-      
-      
-
-    
-      
     </div>
+    <div class="col-md-4">
+      <div class="card card-servico p-3">
+        <div id="moveisCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgs\Peças e moveis\1.jpg" alt="Móvel 1">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\3.jpg" alt="Móvel 2">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\4.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\5.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\6.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\7.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\8.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\9.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\10.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\11.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\12.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\13.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\14.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\15.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\16.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\17.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\18.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\19.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\20.jpg" alt="Móvel 3">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs\Peças e moveis\21.jpg" alt="Móvel 3">
+            </div>
+          </div>
+        </div>
+        <h5>Móveis de Madeira</h5>
+        <p>Crie móveis exclusivos sob medida, combinando design e funcionalidade para sua casa. Nossas peças de madeira
+          são feitas para refletir seu estilo com qualidade e durabilidade</p>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card card-servico p-3">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="imgs\Bolachas\1.jpg" alt="Bolachão 1">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="imgs\Bolachas\2.jpg" alt="Bolachão 2">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\3.jpg" alt="Bolachão 3">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\4.jpg" alt="Bolachão 4">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\5.jpg" alt="Bolachão 5">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\6.jpg" alt="Bolachão 6">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\7.jpg" alt="Bolachão 7">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\8.jpg" alt="Bolachão 8">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\9.jpg" alt="Bolachão 9">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\10.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\11.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\12.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\13.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\14.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\15.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\16.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\17.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\18.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\19.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\20.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\21.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\22.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\23.jpg" alt="Bolachão 10">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="imgs\Bolachas\24.jpg" alt="Bolachão 10">
+          </div>
+
+        </div>
+        <h5>Bolachas de Madeira</h5>
+        <p>Transforme ambientes com peças únicas de bolachas de madeira. Feitas artesanalmente, são perfeitas para
+          decoração ou base para outros objetos, mantendo o charme natural da madeira</p>
+      </div>
+    </div>
+  </section>
+
+  </div>
+  </section>
+
+  <section class="text-center mt-5 animated-section">
+    <h2 class="mb-4">Serviço Seguro e Profissional com décadas de experiência</h2>
+    <p>Garantimos um trabalho de alta qualidade com segurança e agilidade. Entre em contato agora mesmo para um
+      orçamento rápido!</p>
   </section>
 
   <section id="contato" class="text-center">
@@ -292,8 +389,7 @@
       <h2 class="mb-4">Fale Conosco</h2>
       <p>Entre em contato para orçamentos rápidos via WhatsApp ou preencha o formulário abaixo:</p>
       <p><strong>Telefone/WhatsApp:</strong> (34) 99986-4870</p>
-      <a href="https://wa.me/5534999864870" class="btn btn-whats">Chamar no WhatsApp</a>
-
+      <a href="https://wa.me/5534999864870" class="btn btn-whats animate-whats">Chamar no WhatsApp</a>
       <form action="https://getform.io/f/azywvmzb" method="POST" class="mt-5">
         <input type="hidden" name="_gotcha" style="display:none !important">
         <div class="mb-3">
@@ -308,6 +404,16 @@
         <button type="submit" class="btn btn-submit mt-3">Enviar Mensagem</button>
       </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <h2 class="mb-4">Siga-nos nas Redes Sociais</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/marivaldo9844?igsh=Mjg1N3hvZ3N6ejUy" target="_blank"><img
+          src="imgs/icons/instagram.svg" alt="Instagram" style="width: 50px; margin-right: 10px;"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="imgs/icons/facebook.svg" alt="Facebook"
+          style="width: 50px; margin-right: 10px;"></a>
+    </div>
   </section>
 
   <footer class="text-center">
@@ -315,6 +421,89 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .animated-section {
+      opacity: 0;
+      transform: scale(0.8) translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animated-section.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .animated-section h2 {
+      animation: pulse 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.05);
+      }
+    }
+
+    .animate-whats {
+      background-color: #25D366;
+      color: #fff;
+      padding: 5px 20px;
+      font-size: 1.2rem;
+      border-radius: 6.5px;
+      transition: transform 0.5s, background-color 0.5s;
+    }
+
+    .animate-whats:hover {
+      background-color: #128C7E;
+      transform: scale(1.1);
+    }
+
+    .animate-whats:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes pulse-whats {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .animate-whats {
+      animation: pulse-whats 1.5s infinite;
+    }
+
+    .social-icons a {
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const animatedSection = document.querySelector('.animated-section');
+      const sectionPosition = animatedSection.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+
+      if (sectionPosition < screenPosition) {
+        animatedSection.classList.add('active');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
